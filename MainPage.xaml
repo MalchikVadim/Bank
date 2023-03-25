@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bank.MainPage"
+             Shell.NavBarIsVisible="False"
+             WidthRequest="450"
+             HeightRequest="720">
+
+    <Grid BackgroundColor="#534D4D">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Path Stroke="#000" Data="m177.5,-1l445.00001,0l-103.30357,109.38776l-341.69644,50.61225l0,-160z" Fill="#5CCB34"/>
+        <!--<Label Grid.Row="0" Text="registration" HorizontalOptions="Start" FontSize="15" FontAttributes="Bold" Padding="0" Margin="10" TextColor="#534D4D"/>-->
+        <Button Grid.Row="0" BackgroundColor="#5CCB34" HeightRequest="50" WidthRequest="120" Text="registration" HorizontalOptions="Start" VerticalOptions="Start" FontSize="15" FontAttributes="Bold" TextColor="#534D4D" Clicked="MoveRegistrationPage"/>
+        
+        
+        <Grid RowSpacing="5" Grid.Row="1" Margin="20,20,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Image Source="D:\source\Bank\Resources\Images\bank.png" HorizontalOptions="Center" HeightRequest="60" WidthRequest="60" Grid.Row="1" Margin="0"/>
+           
+            <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                <Frame BackgroundColor="White" HeightRequest="50" BorderColor="Black" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="15">
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding Login}" BackgroundColor="White" PlaceholderColor="#7B7B7B" Placeholder="login" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="White" HeightRequest="50" BorderColor="Black" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="15">
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding Password}" BackgroundColor="White" PlaceholderColor="#7B7B7B" Placeholder="password" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
+                    </StackLayout>
+                </Frame>
+
+                <Button Text="Sign in" BackgroundColor="#5CCB34" TextColor="#534D4D" FontAttributes="Bold" CornerRadius="0" WidthRequest="200" Margin="0,35,0,0"/>
+
+                
+                <Label Text="Банк online" HorizontalOptions="Center" Margin="0,100,0,0" TextColor="White" FontSize="Small"/>
+            </StackLayout>
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

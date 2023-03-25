@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bank.RegistrationPage"
+             Title="RegistrationPage"
+             Shell.NavBarIsVisible="False"
+             WidthRequest="450"
+             HeightRequest="720"
+             BackgroundColor="#5CCB34">
+
+    <StackLayout Grid.Row="3" Orientation="Vertical" Margin="0,60,0,0" HorizontalOptions="CenterAndExpand">
+        <Frame BackgroundColor="White" HeightRequest="50" WidthRequest="350" BorderColor="Black" Margin="0,10,0,10" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="15">
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtName" Text="{Binding Name}" BackgroundColor="White" PlaceholderColor="#7B7B7B" Placeholder="name" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="White" HeightRequest="50" WidthRequest="350" BorderColor="Black" Margin="0,10,0,10" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="15">
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtSurname" Text="{Binding Surname}" BackgroundColor="White" PlaceholderColor="#7B7B7B" Placeholder="surname" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="White" HeightRequest="50" WidthRequest="350" BorderColor="Black" Margin="0,10,0,10" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="15">
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtPhone" Text="{Binding Phone}" BackgroundColor="White" PlaceholderColor="#7B7B7B" Placeholder="phone" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="White" HeightRequest="50" WidthRequest="350" BorderColor="Black" Margin="0,10,0,10" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="15">
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtLogin" Text="{Binding Login}" BackgroundColor="White" PlaceholderColor="#7B7B7B" Placeholder="login" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="White" HeightRequest="50" WidthRequest="350" BorderColor="Black" Margin="0,10,0,10" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="15">
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtPassword" Text="{Binding Password}" BackgroundColor="White" PlaceholderColor="#7B7B7B" Placeholder="password" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="White" HeightRequest="50" WidthRequest="350" BorderColor="Black" Margin="0,10,0,10" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="15">
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtConPassword" BackgroundColor="White" PlaceholderColor="#7B7B7B" Placeholder="confirm password" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="10,0,20,0"/>
+            </StackLayout>
+        </Frame>
+
+        <Button Text="Confirm" BackgroundColor="#534D4D" TextColor="White" FontAttributes="Bold" CornerRadius="0" WidthRequest="200" Margin="0,35,0,0" Clicked="MoveLoginPage"/>
+
+        <Label Text="Банк online" HorizontalOptions="Center" Margin="0,100,0,0" TextColor="White" FontSize="Small"/>
+    </StackLayout>
+</ContentPage>
